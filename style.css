@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    margin-top: 220px;
+    background-image: linear-gradient(to left ,#fa4b11,#f90303);
+}
+
+label {
+    color: #FFC300 ;
+    font-family: 'Pacifico', cursive;
+}
+
+.form {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.container {
+    padding-top: 150px;
+}
+
+input[type=submit]{
+    font-family: 'Pacifico', cursive;
+    max-width: 50px;
+}
+
