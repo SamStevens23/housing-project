@@ -1,4 +1,3 @@
-
 const form = document.getElementById("myForm")
 
 form.addEventListener("submit", (e) => {
@@ -8,7 +7,6 @@ form.addEventListener("submit", (e) => {
     let _data = {
         data :  { 
             "area":parseInt(document.getElementById("area").value),
-            // "property-type":document.getElementsByName("proptype").value,
             "property-type":document.getElementById("proptype").value,
             "rooms-number":parseInt(document.getElementById("numrooms").value),
             "zip-code":parseInt(document.getElementById("zipcode").value)
@@ -26,10 +24,11 @@ form.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((json) => {
         console.log(json)
-        alert(json.prediction.price)
+        console.log(json.prediction.price)
+        document.getElementById("prediction").innerHTML = "This would cost you about € " + json.prediction.price
+        //check api doc for the architecture of objects
     })
     .catch((err) => console.log(err));
-
 })
 
 
